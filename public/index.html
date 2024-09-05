@@ -39,5 +39,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <div>
+      <input id="input">
+      <button onclick="speak()">speak</button>
+    </div>
+
+    <script>
+    function speak(){
+      var text =document.getElementById('input').value;
+      var utterance =new SpeechSynthesisUtterance(text);
+      speechSynthesis.speak(utterance);
+    }
+    </script>
   </body>
 </html>

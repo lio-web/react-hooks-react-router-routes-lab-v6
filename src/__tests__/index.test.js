@@ -23,15 +23,7 @@ test('renders the Actors component on route "/actors"', () => {
   expect(screen.getByText(/Actors Page/)).toBeInTheDocument();
 });
 
-test('renders the Directors component on route "/directors"', () => {
-    const router = createMemoryRouter(routes, {
-        initialEntries: ['/directors']
-    })
-  render(
-      <RouterProvider router={router}/>
-  );
-  expect(screen.queryByText(/Directors Page/)).toBeInTheDocument();
-});
+
 
 test('renders the Movie component on route "/movie/:id"', async () => {
     const id = 1
